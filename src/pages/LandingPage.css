@@ -1,0 +1,32 @@
+@keyframes crackerAnimation {
+     0% {
+       opacity: 0;
+       transform: scale(0);
+     }
+     50% {
+       opacity: 1;
+       transform: scale(1.5);
+     }
+     100% {
+       opacity: 0;
+       transform: scale(0);
+     }
+   }
+   
+   .bg-crackers {
+     position: relative;
+   }
+   
+   .bg-crackers:before {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 100%;
+     height: 100%;
+     background: url('https://cdn.pixabay.com/photo/2016/11/29/03/20/fireworks-1869834_960_720.png') no-repeat center center;
+     background-size: cover;
+     transform: translate(-50%, -50%);
+     animation: crackerAnimation 1s ease-out forwards;
+   }
+   
